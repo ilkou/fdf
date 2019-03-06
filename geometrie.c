@@ -66,7 +66,7 @@ void	**ft_caval(t_coordn **map, double zoom, t_point u)
 			map[i][j].x = zoom * ((double)j * 20 +
 					0.7 * cos(45) * (double)i * 20 + u.x);
 			map[i][j].y = zoom * (-(map[i][j].z == 0 ? map[i][j].z *
-						2.5 : map[i][j].z * 2.5 + u.z) + 0.7
+						2.5 : map[i][j].z * u.z) + 0.7
 					* sin(45) * (double)i * 20 + u.y);
 			j++;
 		}
@@ -90,7 +90,7 @@ void	**ft_iso(t_coordn **map, double zoom, t_point u)
 					20 - (double)i * 20 + u.x);
 			map[i][j].y = zoom * ((1 / sqrt(6.0)) * ((double)j * 20 +
 						(double)i * 20) - sqrt(2.0 / 3.0) * (map[i][j].z == 0 ?
-							map[i][j].z * 2.5 : map[i][j].z * 2.5 + u.z) + u.y);
+							map[i][j].z * 2.5 : map[i][j].z * u.z) + u.y);
 			j++;
 		}
 		i++;

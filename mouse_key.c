@@ -35,9 +35,9 @@ void	ft_move(int key, t_ptr *p)
 	else if (key == MLX_KEY_PAD_MINUS)
 		p->zoom -= 0.05;
 	else if (key == MLX_KEY_PAD_W)
-		p->u.z += 2.5;
+		p->u.z += 1.5;
 	else if (key == MLX_KEY_PAD_Z)
-		p->u.z -= 2.5;
+		p->u.z -= 1.5;
 }
 
 int		ft_deal_key(int key, t_ptr *p)
